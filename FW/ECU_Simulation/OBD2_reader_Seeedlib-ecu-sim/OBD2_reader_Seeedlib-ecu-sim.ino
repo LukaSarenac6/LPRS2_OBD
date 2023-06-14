@@ -1,4 +1,3 @@
-#include <mcp_can.h>
 #include <SPI.h>
 #include "mcp2515_can.h"
 
@@ -52,14 +51,32 @@ void loop()
    // sendPid(EngineSpeed);
    // sendPid(VehicleSpeed);
     
-    delay(2000);
+    delay(1000);
 
 }
 
 void sendPid(unsigned char* temp) {
     SERIAL_PORT_MONITOR.print("SEND PID: 0x");
     SERIAL_PORT_MONITOR.println(0x7DF, HEX);
-    CAN.sendMsgBuf(0x00, CAN_STDID, 8, temp);
+    
+    unsigned char msg[8] = {0,0,0,0,0,0,0,0};
+    for(int i = 0; i < 8; ++i){
+      Serial.print(temp[i]);
+      msg[i] = temp[i];
+    }
+    
+    byte res = CAN.sendMsgBuf(0x7DF, CAN_STDID, 0, 8, msg,false);
+    if(res == CAN_OK){
+      Serial.print("POSLO");
+    }else if(res == CAN_SENDMSGTIMEOUT){
+      Serial.print("CAN_SENDMSGTIMEOUT");
+    }else if(res == CAN_GETTXBFTIMEOUT){
+      Serial.print("CAN_GETTXBFTIMEOUT");
+    }else{
+      Serial.print("NEM POJMA STA SE DESAVA");
+    }
+    
+
     //CAN.sendMessage()
 }
 
