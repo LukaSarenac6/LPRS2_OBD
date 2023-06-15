@@ -7,3 +7,7 @@ Protocol -> ISO 15765-4 CAN (11 bit ID,500 Kbaud)
 Link za nalazenje PID formata za request i response poruke -> https://www.csselectronics.com/pages/obd2-pid-table-on-board-diagnostics-j1979
 
 Link za pomoc pri racunanju vrednosti na osnovu dobijene poruke -> https://en.wikipedia.org/wiki/OBD-II_PIDs
+
+MCP2551 datasheet link -> http://ww1.microchip.com/downloads/en/devicedoc/21667e.pdf
+
+MCP2515 datasheet link -> https://ww1.microchip.com/downloads/aemDocuments/documents/APID/ProductDocuments/DataSheets/MCP2515-Family-Data-Sheet-DS20001801K.pdf
