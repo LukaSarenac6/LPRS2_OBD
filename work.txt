@@ -3,3 +3,7 @@ OBD2 pinout link -> https://www.flexihub.com/oobd2-pinout/
 Arduino can shield v2.0 link -> https://wiki.seeedstudio.com/CAN-BUS_Shield_V2.0/
 
 Protocol -> ISO 15765-4 CAN (11 bit ID,500 Kbaud)
+
+Link za nalazenje PID formata za request i response poruke -> https://www.csselectronics.com/pages/obd2-pid-table-on-board-diagnostics-j1979
+
+Link za pomoc pri racunanju vrednosti na osnovu dobijene poruke -> https://en.wikipedia.org/wiki/OBD-II_PIDs
